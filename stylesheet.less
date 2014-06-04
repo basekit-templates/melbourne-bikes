@@ -69,6 +69,9 @@
 @text-links-hover: darken(@color-swatch6, 20%);
 
 // 1. Globals
+html {
+	height: 100%;
+}
 html, body {
 	background-color: @color-swatch1;
 	font-family:@font-swatch5-font-family;
@@ -560,7 +563,7 @@ input[type="search"]::-webkit-search-decoration {
 		padding: 0;
 	}
 	ul li:hover ul {
-		background-color: @background-blocks;
+		background-color: fadeout(@color-swatch1, 15%);
 		top: 55px;
 		left: -1px;
 		a {
@@ -1070,16 +1073,12 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	.widget .extendednavigation a.pull {
 		right: 10px;
-		top: -32px;
+		top: -44px;
 		&:after {
 			right: 7px;
 			background-color: @color-swatch2;
 			box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
 		}
-	}
-	.header-details, .header-phone {
-		text-align: center;
-		
 	}
 	.widget.companyname {
 		padding-right: 60px;
@@ -1096,6 +1095,9 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 	.widget .extendednavigation {
+		ul {
+			padding-top: 0;
+		}
 		ul li {
 			padding: 0;
 			border-bottom: 1px solid @borders-blocks;
